@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Premium Coffee Palette -->
+    <color name="coffee_background">#FAF7F2</color>
+    <color name="coffee_dark">#38251D</color>
+    <color name="coffee_primary">#8B5E3C</color>
+    <color name="coffee_secondary">#B77945</color>
+    <color name="coffee_light">#EFE3D5</color>
+    <color name="coffee_white">#FFFFFF</color>
+    <color name="coffee_gray">#817A74</color>
+    <color name="coffee_green">#6F9879</color>
+
+    <!-- Additional Colors -->
+    <color name="coffee_border">#E8DED2</color>
+    <color name="coffee_soft">#F3EAE0</color>
+    <color name="coffee_gold">#C99A61</color>
+    <color name="coffee_black">#211A16</color>
+    <color name="coffee_red">#D9534F</color>
+
+</resources>

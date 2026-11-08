@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coffee_dark"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:background="@drawable/bg_logo_circle"
+        android:gravity="center"
+        android:text="☕"
+        android:textSize="70sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:letterSpacing="0.08"
+        android:text="KOPI &amp; NYEMIL"
+        android:textColor="@color/coffee_gold"
+        android:textSize="32sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Specialty Coffee &amp; Bakery"
+        android:textColor="@color/coffee_light"
+        android:textSize="14sp"/>
+
+    <ProgressBar
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="50dp"
+        android:indeterminateTint="@color/coffee_gold"/>
+
+</LinearLayout>

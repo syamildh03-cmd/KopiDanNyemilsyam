@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coffee_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alamat Pengiriman"
+            android:textColor="@color/coffee_dark"
+            android:textSize="28sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="25dp"
+            android:text="Lengkapi informasi penerima untuk pengiriman pesananmu."
+            android:textColor="@color/coffee_gray"
+            android:textSize="13sp"/>
+
+        <!-- DELIVERY CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_product_card"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INFORMASI PENERIMA"
+                android:textColor="@color/coffee_primary"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="Nama Penerima"
+                android:textColor="@color/coffee_dark"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etAddressName"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:hint="Nama Lengkap Penerima"
+                android:inputType="textPersonName"
+                android:padding="14dp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Nomor Telepon / WhatsApp"
+                android:textColor="@color/coffee_dark"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etAddressPhone"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:hint="Contoh: 081234567890"
+                android:inputType="phone"
+                android:padding="14dp"
+                android:singleLine="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Alamat Lengkap"
+                android:textColor="@color/coffee_dark"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:gravity="top"
+                android:hint="Jalan, No. Rumah, RT/RW, Kecamatan, Kota"
+                android:inputType="textMultiLine"
+                android:padding="14dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Detail / Patokan Alamat"
+                android:textColor="@color/coffee_dark"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/etAddressDetail"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_input"
+                android:gravity="top"
+                android:hint="Patokan (misal: samping minimarket, pagar hitam)"
+                android:inputType="textMultiLine"
+                android:padding="14dp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSubmitOrder"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bg_button_primary"
+            android:text="Konfirmasi &amp; Bayar Pesanan  →"
+            android:textAllCaps="false"
+            android:textColor="@color/coffee_white"
+            android:textSize="15sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnBackCart"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_input"
+            android:text="Kembali ke Keranjang"
+            android:textAllCaps="false"
+            android:textColor="@color/coffee_dark"/>
+
+        <Button
+            android:id="@+id/btnBackHome"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:text="Kembali ke Home"
+            android:textAllCaps="false"
+            android:textColor="@color/coffee_gray"/>
+
+    </LinearLayout>
+
+</ScrollView>

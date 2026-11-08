@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/coffee_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KOPI &amp; NYEMIL"
+                        android:textColor="@color/coffee_dark"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.05"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:src="@drawable/ic_location"
+                            android:contentDescription="Location icon"/>
+
+                        <TextView
+                            android:id="@+id/tvHomeLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="Jakarta, Indonesia"
+                            android:textColor="@color/coffee_gray"
+                            android:textSize="11sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- CART BADGE BUTTON -->
+                <RelativeLayout
+                    android:id="@+id/btnHomeCart"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_logo_circle"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_cart"
+                        android:contentDescription="Cart icon"/>
+
+                    <TextView
+                        android:id="@+id/tvCartBadge"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@drawable/bg_success_circle"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/coffee_dark"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <!-- GREETING -->
+            <TextView
+                android:id="@+id/tvHomeGreeting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Halo, Coffee Lover!"
+                android:textColor="@color/coffee_dark"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="What would you like to enjoy today?"
+                android:textColor="@color/coffee_gray"
+                android:textSize="13sp"/>
+
+            <!-- SEARCH BAR -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_input">
+
+                <ImageView
+                    android:id="@+id/ivSearchIcon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="14dp"
+                    android:src="@drawable/ic_search"
+                    android:contentDescription="Search Icon"/>
+
+                <EditText
+                    android:id="@+id/etSearchProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/ivSearchIcon"
+                    android:background="@null"
+                    android:hint="Cari kopi, donat, atau roti..."
+                    android:paddingStart="12dp"
+                    android:paddingEnd="14dp"
+                    android:singleLine="true"
+                    android:textColor="@color/coffee_dark"
+                    android:textColorHint="@color/coffee_gray"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+            <!-- PROMOTION BANNER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_banner_premium"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SPECIAL PROMO"
+                        android:textColor="@color/coffee_gold"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="A Little Coffee,\nA Lot of Happiness."
+                        android:textColor="@color/coffee_white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="Diskon 20% untuk Member Baru"
+                        android:textColor="@color/coffee_light"
+                        android:textSize="11sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:gravity="center"
+                    android:text="☕"
+                    android:textSize="50sp"/>
+
+            </LinearLayout>
+
+            <!-- CATEGORY CHIPS -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Categories"
+                android:textColor="@color/coffee_dark"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/btnCatAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:background="@drawable/bg_category_selected"
+                        android:gravity="center"
+                        android:paddingHorizontal="18dp"
+                        android:text="All Menu"
+                        android:textColor="@color/coffee_white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/btnCatCoffee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_category_unselected"
+                        android:gravity="center"
+                        android:paddingHorizontal="18dp"
+                        android:text="Coffee"
+                        android:textColor="@color/coffee_dark"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/btnCatNonCoffee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_category_unselected"
+                        android:gravity="center"
+                        android:paddingHorizontal="18dp"
+                        android:text="Non Coffee"
+                        android:textColor="@color/coffee_dark"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/btnCatSnacks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/bg_category_unselected"
+                        android:gravity="center"
+                        android:paddingHorizontal="18dp"
+                        android:text="Snacks"
+                        android:textColor="@color/coffee_dark"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <!-- PRODUCT LIST TITLE -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Our Menu"
+                    android:textColor="@color/coffee_dark"
+                    android:textSize="19sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tvProductCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="5 Products"
+                    android:textColor="@color/coffee_gray"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+            <!-- PRODUCT LIST -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProducts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:nestedScrollingEnabled="false"
+                android:clipToPadding="false"/>
+
+            <Button
+                android:id="@+id/btnGoOrder"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/bg_button_primary"
+                android:text="View Cart &amp; Checkout  →"
+                android:textAllCaps="false"
+                android:textColor="@color/coffee_white"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- BOTTOM NAVIGATION -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:background="@color/coffee_white"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="15dp">
+
+        <Button
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/coffee_dark"
+            android:text="Home"
+            android:textAllCaps="false"
+            android:textColor="@color/coffee_white"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnHomeCartNav"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/coffee_light"
+            android:text="Cart"
+            android:textAllCaps="false"
+            android:textColor="@color/coffee_dark"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/btnHomeProfile"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/coffee_light"
+            android:text="Profile"
+            android:textAllCaps="false"
+            android:textColor="@color/coffee_dark"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

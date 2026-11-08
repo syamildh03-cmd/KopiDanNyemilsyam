@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    android:background="@drawable/bg_product_card"
+    android:elevation="3dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <!-- PRODUCT IMAGE -->
+    <ImageView
+        android:id="@+id/ivProductImage"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/coffee_soft"
+        android:scaleType="centerCrop"
+        android:contentDescription="Foto produk"
+        android:src="@drawable/img_kopi_gula_aren"/>
+
+    <!-- PRODUCT TITLE & RATING -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvProductName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Kopi Susu Gula Aren"
+            android:textColor="@color/coffee_dark"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/ic_star"
+            android:contentDescription="Star rating"/>
+
+        <TextView
+            android:id="@+id/tvProductRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="4.9"
+            android:textColor="@color/coffee_gold"
+            android:textSize="11sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!-- DESCRIPTION -->
+    <TextView
+        android:id="@+id/tvProductDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Espresso, susu, gula aren"
+        android:textColor="@color/coffee_gray"
+        android:textSize="11sp"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <!-- PRICE & ADD BUTTON -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvProductPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Rp18.000"
+            android:textColor="@color/coffee_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnAddProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_button_primary"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:paddingHorizontal="10dp"
+            android:text="+ Tambah"
+            android:textAllCaps="false"
+            android:textColor="@color/coffee_white"
+            android:textSize="11sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>

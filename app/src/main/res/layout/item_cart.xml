@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_product_card"
+    android:elevation="2dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
+
+    <ImageView
+        android:id="@+id/ivCartItemImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@color/coffee_soft"
+        android:scaleType="centerCrop"
+        android:contentDescription="Foto produk"
+        android:src="@drawable/img_kopi_gula_aren"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCartItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kopi Susu Gula Aren"
+            android:textColor="@color/coffee_dark"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvCartItemPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Rp18.000"
+            android:textColor="@color/coffee_primary"
+            android:textSize="13sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <!-- QUANTITY CONTROLS -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCartMinus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_button_secondary"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:text="-"
+            android:textColor="@color/coffee_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvCartQuantity"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/coffee_dark"
+            android:textSize="14sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnCartPlus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/bg_button_primary"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:padding="0dp"
+            android:text="+"
+            android:textColor="@color/coffee_white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</LinearLayout>

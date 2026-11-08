@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/coffee_background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:layout_width="155dp"
+            android:layout_height="155dp"
+            android:background="@drawable/bg_logo_circle"
+            android:gravity="center"
+            android:text="☕"
+            android:textSize="75sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:letterSpacing="0.06"
+            android:text="KOPI &amp; NYEMIL"
+            android:textColor="@color/coffee_dark"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Coffee, comfort &amp; little happiness."
+            android:textColor="@color/coffee_gray"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5dp"
+            android:text="Temukan rasa favoritmu dan nikmati\nsetiap momen manis bersama kami."
+            android:textColor="@color/coffee_gray"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="45dp"
+            android:background="@drawable/bg_button_primary"
+            android:text="Get Started  →"
+            android:textAllCaps="false"
+            android:textColor="@color/coffee_white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <Button
+            android:id="@+id/btnWelcomeLogin"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
+            android:text="Sudah Punya Akun? Login"
+            android:textAllCaps="false"
+            android:textColor="@color/coffee_dark"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+</ScrollView>

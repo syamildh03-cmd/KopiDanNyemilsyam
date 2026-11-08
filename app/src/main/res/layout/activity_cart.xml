@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/coffee_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keranjang Saya"
+                android:textColor="@color/coffee_dark"
+                android:textSize="28sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvCartSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="20dp"
+                android:text="Periksa pesananmu sebelum lanjut checkout."
+                android:textColor="@color/coffee_gray"
+                android:textSize="13sp"/>
+
+            <!-- EMPTY CART STATE -->
+            <LinearLayout
+                android:id="@+id/layoutEmptyCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="40dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_logo_circle"
+                    android:gravity="center"
+                    android:text="🛒"
+                    android:textSize="50sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Keranjangmu Masih Kosong"
+                    android:textColor="@color/coffee_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Pilih kopi atau camilan favoritmu terlebih dahulu!"
+                    android:textColor="@color/coffee_gray"
+                    android:textSize="13sp"/>
+
+            </LinearLayout>
+
+            <!-- CART ITEMS RECYCLERVIEW -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCartItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"/>
+
+            <!-- SUMMARY CARD -->
+            <LinearLayout
+                android:id="@+id/layoutCartSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_product_card"
+                android:orientation="vertical"
+                android:padding="18dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RINGKASAN PEMBAYARAN"
+                    android:textColor="@color/coffee_primary"
+                    android:textSize="11sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.08"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Subtotal Produk"
+                        android:textColor="@color/coffee_gray"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/tvCartSubtotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp0"
+                        android:textColor="@color/coffee_dark"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Ongkos Kirim"
+                        android:textColor="@color/coffee_gray"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/tvCartDeliveryFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp10.000"
+                        android:textColor="@color/coffee_dark"
+                        android:textSize="13sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@color/coffee_border"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total Pembayaran"
+                        android:textColor="@color/coffee_dark"
+                        android:textSize="15sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:id="@+id/tvCartTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rp0"
+                        android:textColor="@color/coffee_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnProceedToAddress"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bg_button_primary"
+                android:text="Lanjut ke Alamat Pengiriman  →"
+                android:textAllCaps="false"
+                android:textColor="@color/coffee_white"
+                android:textSize="15sp"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnCartBackHome"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input"
+                android:text="Kembali Pilih Produk"
+                android:textAllCaps="false"
+                android:textColor="@color/coffee_dark"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
